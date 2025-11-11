@@ -1,6 +1,6 @@
 const timerDisplay = document.getElementById("timer");
 
-let workDuration = 0.10 * 60; // seconds
+let workDuration = 25 * 60; // seconds
 let timerLeft = workDuration;
 let timer = null;
 
