@@ -1,4 +1,8 @@
 const timerDisplay = document.getElementById("timer");
+const startBtn = document.getElementById("startBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+const resetBtn = document.getElementById("resetBtn");
+
 
 let workDuration = 25 * 60; // seconds
 let timeLeft = workDuration;
@@ -25,4 +29,17 @@ function startTimer() {
   }, 1000);
 }
 
-startTimer();
+function pauseTimer() {
+  clearInterval(timer);
+  timer = null;
+}
+
+function resetTimer() {
+  pauseTimer();
+  timeLeft = workDuration;
+  updateTimerDisplay();
+}
+
+startBtn.addEventListener("click", startTimer);
+pauseBtn.addEventListener("click", pauseTimer);
+resetBtn.addEventListener("click", resetTimer);
