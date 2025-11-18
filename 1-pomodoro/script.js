@@ -6,7 +6,7 @@ const pauseBtn = document.getElementById("pauseBtn");
 const resetBtn = document.getElementById("resetBtn");
 const cycleCountDisplay = document.getElementById("cycleCount");
 
-const WORK_MINUTES = 25;
+const WORK_MINUTES = 5;
 const BREAK_MINUTES = 5;
 const workDuration = WORK_MINUTES * 60;
 const breakDuration = BREAK_MINUTES * 60;
